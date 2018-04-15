@@ -5,10 +5,10 @@ package me.lzb.sqltest.util;
  */
 public class SqlTestUtil {
 
-    public static String getTableName(Class cls) {
-        String className = cls.getSimpleName();
 
-        char[] classNameCharArray = className.toCharArray();
+
+    public static String coverHumpToUnderline(String string) {
+        char[] classNameCharArray = string.toCharArray();
         StringBuilder tableNameSb = new StringBuilder();
 
         tableNameSb.append(Character.toLowerCase(classNameCharArray[0]));
@@ -24,5 +24,6 @@ public class SqlTestUtil {
         }
         return tableNameSb.toString();
     }
+
 
 }
